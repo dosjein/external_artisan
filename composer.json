@@ -1,6 +1,6 @@
 {
-    "name": "shivergard/dreamapply",
-    "description": "DreamApply test task",
+    "name": "dosjein/external_artisan",
+    "description": "External Artisan",
     "require": {
         "austinhyde/iniparser": "dev-master",
         "messagebird/php-rest-api": "1.4.1",
@@ -15,7 +15,7 @@
     "authors": [
         {
             "name": "Ronalds Sovas",
-            "email": "sovas@greenbox.lv"
+            "email": "sovas@dosje.in"
         }
     ],
     "autoload": {
