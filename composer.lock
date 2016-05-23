@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2fc604c09a2bb8e44e32dc58f43afcf0",
+    "hash": "9f50c51ad4db8b695cea9be7b35e172a",
     "packages": [
         {
             "name": "austinhyde/iniparser",

@@ -24,7 +24,13 @@ class FakeLaravel {
 
         $this->lastOutput = new BufferedOutput;
 
-        return $this->command->fire(new ArrayInput($parameters), $this->lastOutput);
+        if (method_exists($this->command , 'fire')){
+            return $this->command->fire(new ArrayInput($parameters), $this->lastOutput);
+        }else if (method_exists($this->command , 'handle')){
+            return $this->command->handle(new ArrayInput($parameters), $this->lastOutput);
+        }else{
+            $this->command->error('missing "fire" and "handle" ');
+        }
     }
 
 }

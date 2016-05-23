@@ -9,7 +9,7 @@ class Kernel {
      * @var array
      */
     protected $commands = [
-        'Shivergard\DreamApply\AcademicConsole'
+        '\Shivergard\DreamApply\Inspire'
     ];
 
     public function getCommands(){
