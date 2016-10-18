@@ -1,2 +1,9 @@
-/vendor/
-/composer.lock
+/vendor
+/commands
+composer.lock
+
+# With phpStorm
+# It makes an idea folder
+# This makes it easy
+.idea/
+

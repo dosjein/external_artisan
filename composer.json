@@ -1,9 +1,7 @@
 {
-    "name": "dosjein/external_artisan",
+    "name": "darunada/external_artisan",
     "description": "External Artisan",
     "require": {
-        "austinhyde/iniparser": "dev-master",
-        "messagebird/php-rest-api": "1.4.1",
         "illuminate/console": "*" ,
         "illuminate/filesystem" : "*",
         "pimple/pimple": "~3.0"
@@ -11,22 +9,19 @@
     "require-dev": {
         "phpunit/phpunit": "~4.0"
     },
-    "license": "wodoo-unknown : feel free to use",
     "authors": [
         {
             "name": "Ronalds Sovas",
             "email": "sovas@dosje.in"
+        },
+        {
+            "name": "Lea Fairbanks",
+            "email": "lea.rae.fairbanks@gmail.com"
         }
     ],
     "autoload": {
-        "classmap": [
-            "src",
-            "src/Console",
-            "src/Console/Commands",
-            "src/helpers"
-        ],
-        "psr-0": {
-            "Shivergard\\DreamApply\\": "src/"
+        "psr-4": {
+            "Darunada\\": ""
         }
     },
     "minimum-stability": "dev"

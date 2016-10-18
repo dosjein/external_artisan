@@ -1,1 +1,0 @@
-composer archive --format=zip --dir=../
