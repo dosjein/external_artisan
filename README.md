@@ -1,7 +1,7 @@
 External Artisan
 ================
 
-[Forked from dosjein/external_artisan](https://github.com/dosjein/external_artisan)
+[Forked from dosjein/external_artisan](https://github.com/dosjein/external_artisan) and made usable.
 
 Artisan the task runner in Laravel.  This library makes it 
 easy to use artisan commands in your own projects.
@@ -15,8 +15,10 @@ php composer.phar require darunada/external-artisan
 ```
 
 ```json
-"require": {
-  "darunada/external-arisan":"dev-master"
+{
+  "require": {
+    "darunada/external-arisan":"dev-master"
+  }
 }
 ```
 
@@ -39,6 +41,19 @@ path to commands in the artisan file.
 Any available commands need to be registered with Artisan.  This
 is done in `Darunada\Console\ArtisanKernel` and will load a config.php file
 located in your commands folder.  
+
+To autoload all classes in the commands file, add the following to your composer.json
+
+```json
+{
+  "autoload": {
+    "classmap": [
+      "commands"
+    ]
+  }
+}
+
+````
 
 #### Service Injection
 Service injection doesn't work.  Instead, a Pimple Container is passed into

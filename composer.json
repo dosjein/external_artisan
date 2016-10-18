@@ -1,6 +1,8 @@
 {
     "name": "darunada/external_artisan",
-    "description": "External Artisan",
+    "description": "External Artisan provides artisan tools for non-laravel projects",
+    "keywords": ["artisan", "commands", "command line", "tools", "utility", "utilities"],
+    "license": "BSD-3-Clause",
     "require": {
         "illuminate/console": "*" ,
         "illuminate/filesystem" : "*",
@@ -23,6 +25,5 @@
         "psr-4": {
             "Darunada\\": ""
         }
-    },
-    "minimum-stability": "dev"
+    }
 }

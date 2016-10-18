@@ -7,9 +7,9 @@ namespace Darunada\Console\Command;
  * I made a slight modification to default the namespace
  */
 
+use Pimple\Container;
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
-use Pimple\Container;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputOption;
 
@@ -21,7 +21,7 @@ class MakeCommand extends Command
      *
      * @var string
      */
-    protected $name = 'command:make';
+    protected $name = 'make:command';
 
     /**
      * The console command description.
