@@ -37,6 +37,14 @@ $artisan = new InitArtisan(ArtisanKernel::class);
  */
 $app = $artisan->init("External Artisan", "Task Runner");
 
+
+/**
+ * Fire up .env
+ */
+$dotenv = new Dotenv\Dotenv(BASE_PATH);
+$dotenv->load();
+
+
 /**
  * Go!
  */
