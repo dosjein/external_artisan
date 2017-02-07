@@ -1,13 +1,51 @@
 #!/usr/bin/env php
 <?php
 
+/**
+ * Copy or symlink this file to your
+ * project root directory
+ */
+
 require "vendor/autoload.php";
 
-use \Shivergard\DreamApply\InitArtisan;
+use Darunada\Console\InitArtisan;
+use Darunada\Console\ArtisanKernel;
 
-$artisan = new InitArtisan();
+/**
+ * The base path of the project,
+ * where artisan is located.
+ */
+define('BASE_PATH', __DIR__);
 
-$app = $artisan->init("Mini Artisan for DreamApply  ", "mi mi mi");
+/**
+ * Commands will be in APP_PATH/commands
+ * You can change this to use a different directory,
+ * or you're welcome to put them anywhere as long
+ * as Composer can autoload them.
+ */
+define('APP_PATH', __DIR__);
 
+/**
+ * You can override your kernel by modifying the class
+ * passed into InitArtisan
+ */
+$artisan = new InitArtisan(ArtisanKernel::class);
+
+/**
+ * If you want to do any version information displayed
+ * when artisan runs, change the parameters passed in.
+ */
+$app = $artisan->init("External Artisan", "Task Runner");
+
+
+/**
+ * Fire up .env
+ */
+$dotenv = new Dotenv\Dotenv(BASE_PATH);
+$dotenv->load();
+
+
+/**
+ * Go!
+ */
 $app->run();
-

@@ -1,33 +1,29 @@
 {
-    "name": "dosjein/external_artisan",
-    "description": "External Artisan",
+    "name": "darunada/external_artisan",
+    "description": "External Artisan provides artisan tools for non-laravel projects",
+    "keywords": ["artisan", "commands", "command line", "tools", "utility", "utilities"],
+    "license": "BSD-3-Clause",
     "require": {
-        "austinhyde/iniparser": "dev-master",
-        "messagebird/php-rest-api": "1.4.1",
         "illuminate/console": "*" ,
-        "illuminate/filesystem" : "*",
+        "illuminate/filesystem" : "~5.4",
         "pimple/pimple": "~3.0"
     },
     "require-dev": {
         "phpunit/phpunit": "~4.0"
     },
-    "license": "wodoo-unknown : feel free to use",
     "authors": [
         {
             "name": "Ronalds Sovas",
             "email": "sovas@dosje.in"
+        },
+        {
+            "name": "Lea Fairbanks",
+            "email": "lea.rae.fairbanks@gmail.com"
         }
     ],
     "autoload": {
-        "classmap": [
-            "src",
-            "src/Console",
-            "src/Console/Commands",
-            "src/helpers"
-        ],
-        "psr-0": {
-            "Shivergard\\DreamApply\\": "src/"
+        "psr-4": {
+            "Darunada\\": ""
         }
-    },
-    "minimum-stability": "dev"
+    }
 }
